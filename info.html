@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info | Sweety</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #030303; color: white; font-family: 'Inter', sans-serif; cursor: none !important; }
+        #minecraft-cursor { position: fixed; width: 44px; height: 44px; background-image: url('https://cur.cursors-4u.net/games/gam-13/gam1282.png'); background-size: contain; pointer-events: none; z-index: 10000; transform: rotate(-15deg); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .story-img { border-radius: 24px; padding: 6px; border: 1px solid rgba(255,255,255,0.1); background: #080808; }
+        .story-img img { border-radius: 18px; width: 100%; height: 500px; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <div id="minecraft-cursor"></div>
+
+    <header class="fixed top-0 w-full z-50 px-6 py-8">
+        <div class="max-w-7xl mx-auto flex justify-center">
+            <nav class="flex p-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                <a href="index.html" class="px-6 py-2 rounded-full text-[13px] text-zinc-400">Work</a>
+                <a href="info.html" class="px-6 py-2 rounded-full text-[13px] bg-white/10 text-white">Info</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-40 px-8 md:px-24 max-w-6xl mx-auto">
+        <section class="reveal mb-32">
+            <span class="text-xs font-bold text-zinc-500 tracking-widest uppercase mb-4 block">ABOUT ME</span>
+            <h1 class="text-4xl md:text-7xl font-medium leading-tight mb-20">I'm passionate about building products that <span class="italic text-zinc-500">empower people.</span></h1>
+            
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="story-img">
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">My background</h3>
+                    <p class="text-zinc-400 leading-relaxed">Dari latar belakang full-stack development, saya belajar bahwa struktur dan estetika harus berjalan beriringan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal mb-32">
+            <h2 class="text-xs font-bold text-zinc-500 tracking-widest mb-12">EXPERIENCE</h2>
+            <div class="border-t border-white/10 py-10 flex flex-col md:flex-row justify-between">
+                <h3 class="text-3xl font-bold">Discord</h3>
+                <div class="md:w-1/2">
+                    <p class="text-xl">Sr. Product Designer</p>
+                    <p class="text-zinc-500">2023 - Present</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const cursor = document.getElementById('minecraft-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        const obs = new IntersectionObserver((es) => {
+            es.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>

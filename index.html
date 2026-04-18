@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweety | Digital Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #ffffff; --bg: #030303; --accent-blue: #3b82f6; --accent-purple: #8b5cf6; }
+        body { background-color: #0b0b0b; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; cursor: none !important; }
+        ::-webkit-scrollbar { width: 0px; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.06); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        #minecraft-cursor { position: fixed; width: 44px; height: 44px; background-image: url('https://cur.cursors-4u.net/games/gam-13/gam1282.png'); background-size: contain; pointer-events: none; z-index: 10000; transform: rotate(-15deg); }
+        #cursor-glow { position: fixed; width: 160px; height: 160px; background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+        .particle { position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; animation: particleLife 0.8s forwards; }
+        @keyframes particleLife { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0) translateY(20px); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px) scale(1.05); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .marquee-content { display: flex; gap: 40px; animation: scrollLeft 30s linear infinite; }
+        @keyframes scrollLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    </style>
+</head>
+<body>
+
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] bg-blue-600/20 blur-[120px] rounded-full"></div>
+        <div class="absolute -bottom-[10%] -right-[10%] w-[50vw] h-[50vw] bg-purple-600/20 blur-[120px] rounded-full"></div>
+    </div>
+
+    <div id="cursor-glow"></div>
+    <div id="minecraft-cursor"></div>
+
+    <header class="fixed top-0 w-full z-50 px-6 py-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="hidden md:flex flex-col">
+                <span class="text-lg font-bold text-white uppercase">Sweety</span>
+                <span class="text-[13px] text-zinc-400">Full-Stack Developer</span>
+            </div>
+            <nav class="flex items-center p-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                <a href="index.html" class="px-6 py-2 rounded-full text-[13px] font-medium bg-white/10 text-white">Work</a>
+                <a href="info.html" class="px-6 py-2 rounded-full text-[13px] font-medium text-zinc-400 hover:text-white transition-all">Info</a>
+            </nav>
+            <div class="hidden md:flex gap-8">
+                <a href="https://linkedin.com" target="_blank" class="text-[13px] font-medium text-white flex items-center gap-1">LinkedIn <span class="text-zinc-400">↗</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="min-h-screen flex flex-col justify-center px-8 md:px-24 pt-20">
+        <div class="reveal grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-[12vw] md:text-[7vw] font-black leading-none uppercase tracking-tighter mb-8">
+                    Digital <br> Architect.
+                </h1>
+                <p class="text-zinc-400 text-lg max-w-sm mb-10">Membangun jembatan antara teknologi dan estetika melalui desain modern.</p>
+            </div>
+            <div class="flex justify-center lg:justify-end">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white/10 overflow-hidden animate-float">
+                    <img src="https://i.pravatar.cc/500?img=32" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="px-8 md:px-24 py-24">
+        <h2 class="text-5xl md:text-8xl font-black uppercase mb-16 reveal">Showcase.</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="reveal glass-card rounded-[2rem] overflow-hidden group">
+                <div class="h-80 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-40">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold mb-2">Nexus Platform</h3>
+                    <p class="text-zinc-400">Google, '23 — Web Ecosystem Management</p>
+                </div>
+            </div>
+            <div class="reveal glass-card rounded-[2rem] overflow-hidden group">
+                <div class="h-80 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-40">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold mb-2">Aether Identity</h3>
+                    <p class="text-zinc-400">Discord, '22 — Brand Redefinition</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-8 md:px-24 py-20 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between gap-10">
+            <p class="text-zinc-400">© 2026 SVVETY. All Rights Reserved.</p>
+            <p class="italic text-zinc-600">Made with love and Mango Green Teas.</p>
+        </div>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('minecraft-cursor');
+        const glow = document.getElementById('cursor-glow');
+        let tX = 0, tY = 0, cX = 0, cY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            tX = e.clientX; tY = e.clientY;
+            if(Math.random() > 0.7) createParticle(e.clientX, e.clientY);
+        });
+
+        function createParticle(x, y) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = x + 'px'; p.style.top = y + 'px';
+            p.style.width = '8px'; p.style.height = '8px';
+            p.style.background = 'white';
+            document.body.appendChild(p);
+            setTimeout(() => p.remove(), 800);
+        }
+
+        function anim() {
+            cX += (tX - cX) * 0.15; cY += (tY - cY) * 0.15;
+            cursor.style.left = cX + 'px'; cursor.style.top = cY + 'px';
+            glow.style.left = tX + 'px'; glow.style.top = tY + 'px';
+            requestAnimationFrame(anim);
+        }
+        anim();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
