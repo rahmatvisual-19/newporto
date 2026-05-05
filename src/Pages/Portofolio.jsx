@@ -110,10 +110,23 @@ const techStacks = [
   { icon: "vite.svg", language: "Vite" },
   { icon: "nodejs.svg", language: "Node JS" },
   { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
+  { icon: "firebase.svg", language: "Firebase" }, //dihapus besok
   { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon: "vercel.svg", language: "Netlify" }, //diganti logonya
+  { icon: "SweetAlert.svg", language: "Github" }, //diganti logonya
+  { icon: "SweetAlert.svg", language: "SweetAlert2" }, //diganti logonya
+  { icon: "SweetAlert.svg", language: "UI Verse" }, //diganti logonya
+  { icon: "SweetAlert.svg", language: "21st.dev" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Figma" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Framer" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Canva" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Chat GPT" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Gemini" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Claude AI" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Manus AI" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Rocket AI" },//diganti logonya
+  { icon: "SweetAlert.svg", language: "Kimi AI" },//diganti logonya
+  
 ];
 
 export default function FullWidthTabs() {

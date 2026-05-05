@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Share2, User, Mail, MessageSquare, Send } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Share2, User, MessageSquare, Send, Target } from "lucide-react";
 import SocialLinks from "../components/SocialLinks";
 import Komentar from "../components/Commentar";
-import Swal from "sweetalert2";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import axios from "axios";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    tujuan: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -30,81 +26,13 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    Swal.fire({
-      title: 'Mengirim Pesan...',
-      html: 'Harap tunggu selagi kami mengirim pesan Anda',
-      allowOutsideClick: false,
-      didOpen: () => {
-        Swal.showLoading();
-      }
-    });
+    const text = `Nama : ${formData.name}%0ATujuan : ${formData.tujuan}%0ADeskripsi : ${formData.message}`;
+    window.open(`https://wa.me/6282184668503?text=${text}`, "_blank");
 
-    try {
-      // Ganti dengan email Anda di FormSubmit
-      const formSubmitUrl = 'https://formsubmit.co/rhma48475@gmail.com';
-      
-      // Siapkan data form untuk FormSubmit
-      const submitData = new FormData();
-      submitData.append('name', formData.name);
-      submitData.append('email', formData.email);
-      submitData.append('message', formData.message);
-      submitData.append('_subject', 'Pesan Baru dari Website Portfolio');
-      submitData.append('_captcha', 'false'); // Nonaktifkan captcha
-      submitData.append('_template', 'table'); // Format email sebagai tabel
-
-      await axios.post(formSubmitUrl, submitData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-
-     
-      Swal.fire({
-        title: 'Berhasil!',
-        text: 'Pesan Anda telah berhasil terkirim!',
-        icon: 'success',
-        confirmButtonColor: '#6366f1',
-        timer: 2000,
-        timerProgressBar: true
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-
-    } catch (error) {
-      if (error.request && error.request.status === 0) {
-        Swal.fire({
-          title: 'Berhasil!',
-          text: 'Pesan Anda telah berhasil terkirim!',
-          icon: 'success',
-          confirmButtonColor: '#6366f1',
-          timer: 2000,
-          timerProgressBar: true
-        });
-
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        Swal.fire({
-          title: 'Gagal!',
-          text: 'Terjadi kesalahan. Silakan coba lagi nanti.',
-          icon: 'error',
-          confirmButtonColor: '#6366f1'
-        });
-      }
-    } finally {
-      setIsSubmitting(false);
-    }
+    setFormData({ name: "", tujuan: "", message: "" });
   };
 
   return (
@@ -174,8 +102,7 @@ const ContactPage = () => {
                   placeholder="Nama Anda"
                   value={formData.name}
                   onChange={handleChange}
-                  disabled={isSubmitting}
-                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50"
+                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30"
                   required
                 />
               </div>
@@ -184,15 +111,14 @@ const ContactPage = () => {
                 data-aos-delay="200"
                 className="relative group"
               >
-                <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+                <Target className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Anda"
-                  value={formData.email}
+                  type="text"
+                  name="tujuan"
+                  placeholder="Tujuan Anda"
+                  value={formData.tujuan}
                   onChange={handleChange}
-                  disabled={isSubmitting}
-                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 disabled:opacity-50"
+                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30"
                   required
                 />
               </div>
@@ -207,8 +133,7 @@ const ContactPage = () => {
                   placeholder="Pesan Anda"
                   value={formData.message}
                   onChange={handleChange}
-                  disabled={isSubmitting}
-                  className="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-[9.9rem] disabled:opacity-50"
+                  className="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-[#6366f1]/30 transition-all duration-300 hover:border-[#6366f1]/30 h-[9.9rem]"
                   required
                 />
               </div>
@@ -216,11 +141,10 @@ const ContactPage = () => {
                 data-aos="fade-up"
                 data-aos-delay="400"
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
-                {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                Kirim Pesan
               </button>
             </form>
 

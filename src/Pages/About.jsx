@@ -218,8 +218,9 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-        Saya adalah mahasiswa Teknik Informatika yang berfokus pada pengembangan Front-End. 
-Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
+            Mahasiswa Teknik Informatika yang fokus mengembangkan produk digital yang fungsional, relevan, dan berorientasi 
+            pada kebutuhan pengguna. Berpengalaman mengerjakan proses end-to-end dengan perhatian pada detail dan pengalaman pengguna, 
+            serta meyakini bahwa teknologi harus mempermudah, bukan mempersulit.
                   </p>
 
                {/* Quote Section */}
@@ -240,7 +241,7 @@ Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupay
         </div>
         
         <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
-          "Leveraging AI as a professional tool, not a replacement."
+          "Not just building stuff, but actually creating solutions."
         </blockquote>
       </div>
 

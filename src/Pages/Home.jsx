@@ -24,7 +24,7 @@ const MainTitle = memo(() => (
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Frontend
+          Digital Product
         </span>
       </span>
       <br />
@@ -73,14 +73,14 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
   </a>
 ));
 
-const TYPING_SPEED = 100;
+const TYPING_SPEED = 50;
 const ERASING_SPEED = 50;
-const PAUSE_DURATION = 2000;
-const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
+const PAUSE_DURATION = 900;
+const WORDS = ["Plan", "Designe", "Launch"];
+const TECH_STACK = ["Laravel", "Node.js", "Vibe Code", "Figma", "Framer"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/rahmatvisual-19", label: "GitHub Profile" },
-  { icon: Linkedin, link: "https://www.linkedin.com", label: "LinkedIn Profile" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/rahmat-maulana-2196ab2a5/", label: "LinkedIn Profile" },
   { icon: Instagram, link: "https://www.instagram.com/rahmat_visual/", label: "Instagram Profile" }
 ];
 
@@ -140,24 +140,24 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Rahmat Maulana Miftah — Fullstack Web Developer</title>
-        <meta name="description" content="Website resmi Rahmat Maulana Miftah, Front-End Web Developer. Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan." />
+        <title>Rahmat Maulana Miftah — Digital Product Developer</title>
+        <meta name="description" content="Website resmi Rahmat Maulana Miftah, Digital Product Developer. Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan." />
      <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ekizr.com" />
-        <meta property="og:title" content="Rahmat Maulana Miftah — Fullstack Web Developer" />
-     <meta property="og:description" content="Website resmi dan portofolio Rahmat Maulana Miftah, Fullstack Web Developer." />
-        <meta property="og:url" content="https://ekizr.com" />
+        <link rel="canonical" href="https://rahmatvisual.netlify.app/" />
+        <meta property="og:title" content="Rahmat Maulana Miftah — Digital Product Developer" />
+     <meta property="og:description" content="Website resmi dan portofolio Rahmat Maulana Miftah, Digital Product Developer." />
+        <meta property="og:url" content="https://rahmatvisual.netlify.app/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Rahmat Maulana Miftah",
-            "jobTitle": "Frontend Developer",
-            "url": "https://ekizr.com",
+            "jobTitle": "Digital Product Developer",
+            "url": "https://rahmatvisual.netlify.app/",
             "sameAs": [
               "https://github.com/rahmatvisual-19",
-              "https://www.linkedin.com/in/ekizr/",
+              "https://www.linkedin.com/in/rahmat-maulana-2196ab2a5/",
               "https://www.instagram.com/rahmat_visual/"
             ]
           }
@@ -188,7 +188,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                    Mengembangkan produk digital end-to-end yang inovatif, fungsional, dan berfokus pada pengalaman pengguna untuk menghadirkan solusi yang berdampak.
                   </p>
 
                   {/* Tech Stack */}
@@ -229,7 +229,7 @@ const Home = () => {
                     isHovering ? "scale-105" : "scale-100"
                   }`}>
                     <img
-                      src="Animation1.gif"
+                      src="website.gif"
                       alt="Developer Animation"
                       className={`w-full h-full object-contain transition-all duration-500 ${
                         isHovering 
