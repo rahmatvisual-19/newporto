@@ -1,7 +1,8 @@
-import React, { useEffect, memo, useMemo } from "react"
+import React, { useEffect, memo, useMemo, useState } from "react"
 import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { supabase } from "../supabase"
 
 // Memoized Components
 const Header = memo(() => (
@@ -113,21 +114,34 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
-  // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
-    
+  const [totalProjects, setTotalProjects] = useState(0);
+  const [totalCertificates, setTotalCertificates] = useState(0);
+
+  // Fetch data dari Supabase
+  useEffect(() => {
+    const fetchCounts = async () => {
+      try {
+        const [projectsRes, certificatesRes] = await Promise.all([
+          supabase.from("projects").select("id", { count: "exact", head: true }),
+          supabase.from("certificates").select("id", { count: "exact", head: true })
+        ]);
+
+        setTotalProjects(projectsRes.count || 0);
+        setTotalCertificates(certificatesRes.count || 0);
+      } catch (error) {
+        console.error("Error fetching counts:", error);
+      }
+    };
+
+    fetchCounts();
+  }, []);
+
+  // Memoized year calculation
+  const YearExperience = useMemo(() => {
     const startDate = new Date("2021-11-06");
     const today = new Date();
-    const experience = today.getFullYear() - startDate.getFullYear() -
+    return today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
-
-    return {
-      totalProjects: storedProjects.length,
-      totalCertificates: storedCertificates.length,
-      YearExperience: experience
-    };
   }, []);
 
   // Optimized AOS initialization
