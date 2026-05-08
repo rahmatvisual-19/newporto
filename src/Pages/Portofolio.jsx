@@ -110,22 +110,23 @@ const techStacks = [
   { icon: "vite.svg", language: "Vite" },
   { icon: "nodejs.svg", language: "Node JS" },
   { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" }, //dihapus besok
+  { icon: "Mysql.svg", language: "Mysql" },
+  { icon: "Supabase.svg", language: "Supabase" }, 
   { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Netlify" }, //diganti logonya
-  { icon: "SweetAlert.svg", language: "Github" }, //diganti logonya
-  { icon: "SweetAlert.svg", language: "SweetAlert2" }, //diganti logonya
-  { icon: "SweetAlert.svg", language: "UI Verse" }, //diganti logonya
-  { icon: "SweetAlert.svg", language: "21st.dev" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Figma" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Framer" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Canva" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Chat GPT" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Gemini" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Claude AI" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Manus AI" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Rocket AI" },//diganti logonya
-  { icon: "SweetAlert.svg", language: "Kimi AI" },//diganti logonya
+  { icon: "Netlify.svg", language: "Netlify" }, 
+  { icon: "github.svg", language: "Github" }, 
+  { icon: "SweetAlert.svg", language: "SweetAlert2" }, 
+  { icon: "UI.svg", language: "UI Verse" }, 
+  { icon: "21dev.svg", language: "21st.dev" },
+  { icon: "Figma.svg", language: "Figma" },
+  { icon: "Framer.svg", language: "Framer" },
+  { icon: "Canva.svg", language: "Canva" },
+  { icon: "Chatgpt.svg", language: "Chat GPT" },
+  { icon: "Gemini.svg", language: "Gemini" },
+  { icon: "Claude.svg", language: "Claude AI" },
+  { icon: "Manus.svg", language: "Manus AI" },
+  { icon: "Rocket.svg", language: "Rocket AI" },
+  { icon: "Kimi.svg", language: "Kimi AI" },
   
 ];
 
