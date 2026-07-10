@@ -18,6 +18,7 @@ const ContactPage = lazy(() => import("./Pages/Contact"));
 const ProjectDetails = lazy(() => import("./components/ProjectDetail"));
 const WelcomeScreen = lazy(() => import("./Pages/WelcomeScreen"));
 const NotFoundPage = lazy(() => import("./Pages/404"));
+const Pricing = lazy(() => import("./components/Pricing"));
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
@@ -38,6 +39,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <About />
           <Suspense fallback={<div className="h-20" />}>
             <Portofolio />
+            <Pricing />
             <ContactPage />
           </Suspense>
           <Footer />

@@ -30,6 +30,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
             <img
               src={Img}
               alt={Title}
+              loading="lazy"
               className="w-full h-full object-cover aspect-[16/8] transform group-hover:scale-105 transition-transform duration-500"
             />
           </div>
