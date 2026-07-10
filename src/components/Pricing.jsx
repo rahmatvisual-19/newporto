@@ -120,8 +120,7 @@ const Pricing = () => {
 
             <div className="mt-7 flex flex-col gap-1">
               <div className="flex items-end gap-1.5">
-                <span className="text-4xl font-bold tracking-tight">Rp 899rb</span>
-                <span className="text-white/40 text-sm pb-1.5">/ paket</span>
+                <span className="text-4xl font-bold tracking-tight">Custom</span>
               </div>
               <p className="text-xs text-cyan-300/80">Custom / Company Profile</p>
             </div>
