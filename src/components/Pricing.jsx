@@ -49,14 +49,13 @@ const Pricing = () => {
             <div className="mt-7 flex flex-col gap-1">
               <div className="flex items-end gap-1.5">
                 <span className="text-4xl font-bold tracking-tight">Rp 149rb</span>
-                <span className="text-white/40 text-sm pb-1.5">/ bayar putus</span>
               </div>
               <p className="text-xs text-indigo-300/80">Ramah Kantong Mahasiswa</p>
             </div>
 
-            <button className="mt-7 w-full py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 transition font-semibold text-sm">
+            <a href="https://wa.me/6282184668503?text=Saya%20tertarik%20dengan%20paket%20Starter%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20hal%20ini" target="_blank" rel="noopener noreferrer" className="mt-7 w-full py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 transition font-semibold text-sm block text-center">
               Pilih Paket Starter
-            </button>
+            </a>
 
             <div className="mt-8 h-px bg-white/10"></div>
 
@@ -85,15 +84,14 @@ const Pricing = () => {
 
               <div className="mt-7 flex flex-col gap-1 relative z-10">
                 <div className="flex items-end gap-1.5">
-                  <span className="text-4xl font-bold tracking-tight">Rp 399rb</span>
-                  <span className="text-white/40 text-sm pb-1.5">/ paket</span>
+                  <span className="text-4xl font-bold tracking-tight">Rp 599rb</span>
                 </div>
                 <p className="text-xs text-fuchsia-300/80">Standar UMKM Pemula</p>
               </div>
 
-              <button className="mt-7 w-full py-3 rounded-xl bg-gradient-to-r from-indigo-400 to-fuchsia-400 hover:brightness-110 transition font-bold text-sm text-[#0d0d16] shadow-lg shadow-indigo-500/30 relative z-10">
+              <a href="https://wa.me/6282184668503?text=Saya%20tertarik%20dengan%20paket%20Growth%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20hal%20ini" target="_blank" rel="noopener noreferrer" className="mt-7 w-full py-3 rounded-xl bg-gradient-to-r from-indigo-400 to-fuchsia-400 hover:brightness-110 transition font-bold text-sm text-[#0d0d16] shadow-lg shadow-indigo-500/30 relative z-10 block text-center">
                 Pilih Paket Growth
-              </button>
+              </a>
 
               <div className="mt-8 h-px bg-white/10 relative z-10"></div>
 
@@ -101,9 +99,12 @@ const Pricing = () => {
                 <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Landing Page Bisnis (Max 3 Bagian)</li>
                 <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Tombol Langsung Chat ke WA Owner</li>
                 <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Integrasi Google Maps Alamat Toko</li>
-                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Setup Domain .my.id / .biz.id (1 Thn)</li>
-                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Pengerjaan Cepat (2-3 Hari)</li>
+                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Setup Custom Domain</li>
+                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Desain Premium & Animasi Interaktif</li>
+                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Optimasi SEO Dasar & Kecepatan</li>
+                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Waktu Pengerjaan Tergantung Fitur (Min. 1 Minggu)</li>
                 <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Gratis Revisi Ringan 2 Kali</li>
+                <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-fuchsia-300" strokeWidth={2.2} />Gratis Maintenance 1 Bulan</li>
               </ul>
             </div>
           </div>
@@ -125,19 +126,20 @@ const Pricing = () => {
               <p className="text-xs text-cyan-300/80">Custom / Company Profile</p>
             </div>
 
-            <button className="mt-7 w-full py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 transition font-semibold text-sm">
+            <a href="https://wa.me/6282184668503?text=Saya%20tertarik%20dengan%20paket%20Scale%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20hal%20ini" target="_blank" rel="noopener noreferrer" className="mt-7 w-full py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/25 transition font-semibold text-sm block text-center">
               Pilih Paket Scale
-            </button>
+            </a>
 
             <div className="mt-8 h-px bg-white/10"></div>
 
             <ul className="mt-6 space-y-3.5 text-sm text-white/65">
-              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Multi-Page Website (Hingga 5 Halaman)</li>
-              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Desain Premium & Kustom</li>
-              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Termasuk Domain .com (1 Tahun)</li>
-              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Setup SEO Dasar</li>
-              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Garansi Perbaikan Error 1 Bulan</li>
-              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Diajari Cara Edit Konten Sendiri</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Multi-Page Website (Sesuai Kebutuhan)</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Desain UI/UX Eksklusif & Animasi Premium</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Termasuk Domain Pilihan (.com / .id)</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Optimasi SEO Lanjutan & Kecepatan Tinggi</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Integrasi Payment Gateway / Fitur Khusus</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Gratis Maintenance 3 Bulan & Support Prioritas</li>
+              <li className="flex gap-3"><Check className="w-4.5 h-4.5 mt-0.5 shrink-0 text-cyan-300" strokeWidth={2.2} />Pelatihan Pengelolaan Konten (CMS)</li>
             </ul>
           </div>
 
